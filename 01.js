@@ -1,29 +1,23 @@
 let stringCorrompida = "$Ailuropoda@ melanoleuca!";
 
-let textoPurificado = 0;
-let c = 0;
-let podeBotar = false;
+let textoPurificado = false;
 
 for (letra of stringCorrompida) {
   let corrompido = ["!", "@", "#", "$", "%", "&", "*", "(", ")"];
-  while (corrompido) {
+  let c = 0;
+
+  while (corrompido.length > c && corrompido) {
     if (letra === corrompido[c]) {
       corrompido = false;
-      podeBotar = false;
-    } else if (corrompido.length === c + 1) {
-      podeBotar = true;
-      corrompido = false;
-      c = 0;
+      letra = false;
     } else {
       c++;
     }
   }
-  if (podeBotar) {
-    textoPurificado =
-      textoPurificado === 0 ? letra : textoPurificado + `${letra}`;
+
+  if (letra) {
+    textoPurificado = !textoPurificado ? letra : textoPurificado + letra;
   }
 }
 
-stringCorrompida = textoPurificado;
-
-console.log(stringCorrompida);
+console.log(textoPurificado);

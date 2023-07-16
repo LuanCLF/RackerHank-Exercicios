@@ -6,8 +6,6 @@ let maiorNumeroAtual = 0;
 let menorNumero = 0;
 let maiorNumero = 0;
 
-let indiceAtual = 0;
-let proximo = 1;
 let soma = 0;
 for (let nota of notas) {
   soma += nota;

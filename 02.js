@@ -1,10 +1,10 @@
 let letra = "m";
 const palavras = ["mamao", "maca", "melao", "melancia"];
 
-let perdeu = 0;
+let erros = 0;
 for (item of palavras) {
   if (item[0] !== letra) {
-    perdeu++;
+    erros++;
   }
 }
-console.log(perdeu);
+console.log(erros);

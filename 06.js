@@ -1,4 +1,4 @@
-const primeiraLetra = "c";
+const primeiraLetra = "a";
 const segundaLetra = "v";
 const palavras = ["aveia", "manha", "ave"];
 

@@ -6,12 +6,9 @@ for (letra of stringCorrompida) {
   let corrompido = ["!", "@", "#", "$", "%", "&", "*", "(", ")"];
   let c = 0;
 
-  while (corrompido.length > c && corrompido) {
-    if (letra === corrompido[c]) {
-      corrompido = false;
+  for (let item of corrompido) {
+    if (letra === item) {
       letra = false;
-    } else {
-      c++;
     }
   }
 
